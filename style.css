@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* FULL BACKGROUND IMAGE */
+.hero-bg {
+  min-height: 100vh;
+  background: url("synopsis-bg.jpg.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* KEEP CONTENT ABOVE OVERLAY */
+.hero-bg * {
+  position: relative;
+  z-index: 2;
+}
+
+/* NAVIGATION */
+.nav-link-custom {
+  color: gold;
+  margin: 0 25px;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-link-custom:hover {
+  color: white;
+}
+
+.active {
+  border-bottom: 3px solid gold;
+}
+
+/* WWE LOGO TEXT */
+.logo {
+  color: white;
+  font-size: 28px;
+  margin: 0 20px;
+}
+
+/* CONTENT AREA */
+.content-area {
+  padding: 50px;
+}
+
+/* TEXT BOX (BLACK WITH ROUNDED EDGES) */
+.text-box {
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.social-icons a {
+  color: gold;
+  margin-right: 10px;
+  text-decoration: none;
+}
