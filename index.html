@@ -1,224 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>WrestleMania 39 Synopsis</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarrett Brown Portfolio</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <style>
-    :root {
-      --gold: #caa24a;
-    }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #1a1412;
+  color: #fff;
+  line-height: 1.6;
+}
 
-    body {
-      background: black;
-      color: white;
-    }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    /* NAVBAR */
-    .nav-glow {
-      border-bottom: 2px solid var(--gold);
-      background: rgba(0,0,0,0.9);
-      position: relative;
-    }
+/* HERO */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+}
 
-    .navbar-brand img {
-      height: 50px;
-      transition: transform 0.3s ease;
-    }
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
 
-    .navbar-brand img:hover {
-      transform: scale(1.1);
-    }
+.hero h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #c7bfb9;
+  margin-bottom: 30px;
+}
 
-    /* HERO */
-    .synopsis-hero {
-      background: url("synopsis-bg.jpg.jpg") center/cover no-repeat;
-      min-height: 100vh;
-      position: relative;
-    }
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
 
-    .synopsis-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.70);
-    }
+.hero img {
+  width: 100%;
+  border-radius: 6px;
+}
 
-    .synopsis-content {
-      position: relative;
-      z-index: 2;
-      padding-top: 120px;
-      padding-bottom: 80px;
-      text-align: center;
-    }
+.hero-text {
+  font-size: 0.85rem;
+  color: #d8d2cd;
+}
 
-    .section-title {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 4px;
-      color: var(--gold);
-      margin-bottom: 40px;
-      text-transform: uppercase;
-    }
+.hero-text p {
+  margin-bottom: 15px;
+}
 
-    /* BOX */
-    .synopsis-box {
-      background: rgba(0,0,0,0.75);
-      border: 2px solid var(--gold);
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 25px rgba(202,162,74,0.3);
-      transition: 0.3s ease;
-    }
+.scroll-text {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #aaa;
+}
 
-    .synopsis-box:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 40px rgba(202,162,74,0.5);
-    }
+/* PROJECT GRID */
+.projects {
+  margin-top: 60px;
+}
 
-    .synopsis-box p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111;
-      padding: 30px;
-      text-align: center;
-      border-top: 2px solid var(--gold);
-    }
+.project {
+  text-align: center;
+}
 
-    .social-icons {
-      margin-top: 10px;
-    }
+.project img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
 
-    .social-icons a {
-      color: #aaa;
-      font-size: 1.6rem;
-      margin: 0 12px;
-      transition: 0.3s ease;
-      text-decoration: none;
-    }
+.project-title {
+  font-size: 0.7rem;
+  color: #b5aaa3;
+  letter-spacing: 1px;
+}
 
-    .social-icons a:hover {
-      color: var(--gold);
-      transform: scale(1.2);
-    }
+/* FOOTER */
+footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: #aaa;
+}
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .section-title {
-        font-size: 2rem;
-      }
+footer .left, footer .right {
+  margin-bottom: 10px;
+}
 
-      .synopsis-box {
-        padding: 20px;
-      }
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark nav-glow px-3">
-  <div class="container-fluid position-relative">
+<div class="container">
 
-    <!-- TOGGLER -->
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>FINESSE</h2>
+    <h1>JARRETT BROWN</h1>
+    <h2>PORTFOLIO</h2>
 
-    <!-- CENTER LOGO -->
-    <a href="index.html" class="navbar-brand position-absolute top-50 start-50 translate-middle">
-      <img src="70494_WM37_logo_Final.jpg" alt="WWE Logo">
-    </a>
+    <div class="hero-content">
+      <img src="images/Screenshot_27-4-2026_114245_www.canva.com.jpeg" alt="Portrait">
 
-    <!-- NAV LINKS -->
-    <div class="collapse navbar-collapse justify-content-between" id="nav">
+      <div class="hero-text">
+        <p>
+          My name is Jarrett Brown and I am a detail-oriented, organized, and meticulous employee.
+          Works at fast pace to meet tight deadlines. Enthusiastic team player ready to contribute
+          to company success. Creative professional prepared to bring innovative design solutions
+          to visual challenges.
+        </p>
 
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Synopsis</a></li>
-        <li class="nav-item"><a class="nav-link" href="cast.html">Cast</a></li>
-      </ul>
+        <p>
+          Known for collaborative approach and delivering high-quality results. Results-oriented
+          graphic artist successful at applying technical skills to create art that informs and
+          engages customers. Clear communicator and collaborative team player with an eye for detail
+          and skill in customer relations.
+        </p>
+      </div>
 
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
-      </ul>
-
+      <img src="images/Screenshot_27-4-2026_11420_www.canva.com.jpeg" alt="Action Shot">
     </div>
-  </div>
-</nav>
 
-<!-- SYNOPSIS -->
-<main>
-  <section class="synopsis-hero">
+    <div class="scroll-text">SCROLL DOWN TO SEE MY WORK!</div>
+  </section>
 
-    <div class="synopsis-content container">
+  <!-- PROJECTS -->
+  <section class="projects">
+    <div class="grid">
 
-      <h1 class="section-title">Synopsis</h1>
+      <div class="project">
+        <img src="images/March madness inspo 1 (3).png">
+        <div class="project-title">MARCH MADNESS 2025 GRAPHIC</div>
+      </div>
 
-      <div class="synopsis-box">
+      <div class="project">
+        <img src="images/DUNK PACKAGE!! VOL 1 (1).png">
+        <div class="project-title">DUNK PACKAGE VOLUME 1</div>
+      </div>
 
-        <h2>WrestleMania 39</h2>
+      <div class="project">
+        <img src="images/FINAL MF DOOM AD (2).png">
+        <div class="project-title">MF DOOM TEASER POSTER</div>
+      </div>
 
-        <p>
-          The main event of WrestleMania 39 featured Undisputed WWE Universal Champion Roman Reigns
-          defending his title against Royal Rumble winner Cody Rhodes in a highly emotional showdown.
-        </p>
+      <div class="project">
+        <img src="images/Lakers .png">
+        <div class="project-title">25-26 LAKERS GRAPHIC</div>
+      </div>
 
-        <p>
-          Cody Rhodes entered the match with a mission to “finish the story” and capture the championship
-          his father, Dusty Rhodes, never won. The atmosphere was electric as fans witnessed one of the
-          most anticipated main events in modern WWE history.
-        </p>
+      <div class="project">
+        <img src="images/Shai.png">
+        <div class="project-title">MVP SHAI GRAPHIC</div>
+      </div>
 
-        <p>
-          Despite Cody’s heroic effort, interference from The Bloodline shifted the outcome,
-          allowing Roman Reigns to retain his championship and continue his historic reign.
-        </p>
-
+      <div class="project">
+        <img src="images/WrestleMania 39 (3).png">
+        <div class="project-title">WM 39 GRAPHIC</div>
       </div>
 
     </div>
-
   </section>
-</main>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 WrestleMania 39 Tribute Site | Not affiliated with WWE</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="left">
+      SOCIALS <br>
+      Instagram | @J_brownx3
+    </div>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com/wwe/" target="_blank">
-      <i class="bi bi-instagram"></i>
-    </a>
+    <div class="center">
+      © 2026 Jarrett Brown. All rights reserved.
+    </div>
 
-    <a href="https://x.com/WWE" target="_blank">
-      <i class="bi bi-twitter-x"></i>
-    </a>
+    <div class="right">
+      CONTACT INFO <br>
+      951-159-5195 <br>
+      J24brown314@gmail.com
+    </div>
+  </footer>
 
-    <a href="https://www.youtube.com/@WWE" target="_blank">
-      <i class="bi bi-youtube"></i>
-    </a>
+</div>
 
-    <a href="https://www.wwe.com/" target="_blank">
-      <i class="bi bi-globe"></i>
-    </a>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
